@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .title {
+    @apply h-[30rem] bg-primary px-[20rem] flex items-center;
+  }
+}
