@@ -1,14 +1,16 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import { Home } from "./Home";
-import Reserve from "./Reserve";
-import Header from "./Header";
-import Footer from "./Footer";
-import FormShell from "./GlobalContext";
-import Confirm from "./Confirm";
-import Error404 from "./Error";
 import { useState, createContext, useContext } from "react";
-import ThankYou from "./ThankYou";
+import { Route, Routes } from "react-router-dom";
+
+import { Home } from "./Components/Home/Home";
+import Reserve from "./Components/Reserve/Reserve";
+import Header from "./Components/Header & Footer/Header";
+import Footer from "./Components/Header & Footer/Footer";
+import FormShell from "./Context & Data/GlobalContext";
+import Confirm from "./Components/Confirm/Confirm";
+import Error404 from "./Components/Error/Error";
+import ThankYou from "./Components/ThankYou/ThankYou";
+
+import "./App.css";
 
 const AppLoading = createContext(null);
 export const useAppLoading = () => useContext(AppLoading);

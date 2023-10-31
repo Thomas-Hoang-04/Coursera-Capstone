@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
-import { card_data as data } from "./card_data";
+import { useNavigate } from "react-router-dom";
+import { card_data as data } from "../../Context & Data/card_data.js";
 
 import "./Home.css";
-import food from "./assets/images/hero_food.jpg";
-import a1 from "./assets/images/Mario and Adrian A.jpg";
-import a2 from "./assets/images/Mario and Adrian b.jpg";
-import Card from "./Card";
-import { useAppLoading } from "./App";
+import food from "../../assets/images/hero_food.jpg";
+import a1 from "../../assets/images/Mario and Adrian A.jpg";
+import a2 from "../../assets/images/Mario and Adrian b.jpg";
+import Card from "../Card/Card";
+import { useAppLoading } from "../../App";
 
 export function Home() {
   const navigate = useNavigate();

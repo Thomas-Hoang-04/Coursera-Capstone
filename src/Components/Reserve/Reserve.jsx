@@ -1,7 +1,11 @@
 import "./Reserve.css";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import { useData, useSetData, useAvailable } from "./GlobalContext";
+import {
+  useData,
+  useSetData,
+  useAvailable,
+} from "../../Context & Data/GlobalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleExclamation,
@@ -9,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import DateTimeSelector from "./TimeSelector";
 import { useNavigate } from "react-router-dom";
-import { useAppLoading } from "./App";
+import { useAppLoading } from "../../App";
 
 export function DataInput({
   field,

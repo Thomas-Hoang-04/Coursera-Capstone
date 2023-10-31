@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useAppLoading } from "./App";
+import { useAppLoading } from "../../App";
 
-import success from "./assets/images/Success.png";
+import success from "../../assets/images/Success.png";
 import "./ThankYou.css";
 
 export default function ThankYou() {

@@ -1,5 +1,5 @@
 import "./Confirm.css";
-import { useData } from "./GlobalContext";
+import { useData } from "../../Context & Data/GlobalContext";
 import { Formik, Field, Form } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,7 @@ import {
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { useAppLoading } from "./App";
+import { useAppLoading } from "../../App";
 
 const DateSuffix = ["st", "nd", "rd", "th"];
 

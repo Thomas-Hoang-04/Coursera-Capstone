@@ -1,6 +1,6 @@
-import greek_salad from "./assets/images/greek salad.jpg";
-import bruchetta from "./assets/images/bruchetta.svg";
-import lemon_dessert from "./assets/images/lemon dessert.jpg";
+import greek_salad from "../assets/images/greek salad.jpg";
+import bruchetta from "../assets/images/bruchetta.svg";
+import lemon_dessert from "../assets/images/lemon dessert.jpg";
 
 export const card_data = [
   {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import delivery from "./assets/images/delivery.png";
+import delivery from "../../assets/images/delivery.png";
 
 export default function Card({ name, price, description, imgLink }) {
   return (

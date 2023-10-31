@@ -7,7 +7,11 @@ import {
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import { useSetData, useAvailable, useSetAvailable } from "./GlobalContext";
+import {
+  useSetData,
+  useAvailable,
+  useSetAvailable,
+} from "../../Context & Data/GlobalContext";
 
 export default function DateTimeSelector({ desc, id, ...props }) {
   const {

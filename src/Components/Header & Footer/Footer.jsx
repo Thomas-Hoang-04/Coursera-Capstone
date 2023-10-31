@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -9,8 +10,8 @@ import {
   faXTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import footer_logo from "./assets/images/Logo.png";
-import { Link } from "react-router-dom";
+
+import footer_logo from "../../assets/images/Logo.png";
 
 export default function Footer() {
   return (

@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import error from "./assets/images/404.jpg";
 import { useNavigate } from "react-router-dom";
-import { useAppLoading } from "./App";
+import { useAppLoading } from "../../App";
+
+import error from "../../assets/images/404.jpg";
 
 export default function Error404() {
   const navigate = useNavigate();
