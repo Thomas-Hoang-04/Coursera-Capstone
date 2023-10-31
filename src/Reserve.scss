@@ -1,0 +1,149 @@
+@tailwind components;
+
+@layer components {
+  .title {
+    @apply h-[30rem] bg-primary px-[18rem] flex items-center;
+  }
+
+  .guest-info {
+    @apply px-[18rem] w-full py-12;
+  }
+
+  .data-inp {
+    @apply my-4 mb-8 flex flex-col gap-4;
+    label {
+      @apply text-[1.35rem] font-sec tracking-tight;
+    }
+    .form-input {
+      @apply border-2 text-[1.15rem] p-4 focus:outline-none rounded-lg hover:border-primary focus-within:border-primary focus-visible:border-primary;
+    }
+    p {
+      @apply text-[1.25rem];
+    }
+
+    .select {
+      @apply p-4 border-2 rounded-lg w-[15rem] outline-none focus:border-primary text-[1.25rem];
+    }
+  }
+
+  .date-input {
+    @apply p-4 text-[1.25rem] rounded-r-none outline-none border-r-0 border-2 hover:border-primary focus:border-primary focus-within:border-primary focus-visible:border-primary rounded-lg w-[calc(100%-4rem)];
+  }
+
+  .calendar {
+    svg {
+      @apply w-8 h-8;
+      stroke: #495e57;
+      stroke-width: 2;
+    }
+  }
+
+  .avail {
+    @apply flex gap-2 items-center font-sec font-bold;
+    p {
+      @apply text-[1.5rem] text-primary;
+    }
+  }
+
+  .no-avail {
+    @apply flex gap-2 items-center font-sec font-bold;
+    p {
+      @apply text-[1.5rem] text-sec_btn;
+    }
+  }
+}
+
+.select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+  display: none;
+}
+
+input[type="date"]:before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: "FontAwesome";
+  content: "\f133";
+  font-size: 1.75rem;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #495e57;
+}
+
+$div: 40px;
+$w1: calc($div / 5);
+$w2: calc($div / 10);
+$base: calc($div / 20);
+
+.custom-loader {
+  --color: #495e57;
+  position: relative;
+  width: $div;
+  height: $div;
+  --c: linear-gradient(var(--color) 0 0);
+  --r1: radial-gradient(farthest-side at bottom, var(--color) 93%, #0000);
+  --r2: radial-gradient(farthest-side at top, var(--color) 93%, #0000);
+  background: var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2),
+    var(--c), var(--r1), var(--r2);
+  background-repeat: no-repeat;
+  animation: db2 1s infinite alternate;
+  z-index: 99;
+}
+
+@keyframes db2 {
+  0%,
+  25% {
+    background-size: $w1 0, $w1 $w2, $w1 $w2, $w1 0, $w1 $w2, $w1 $w2, $w1 0,
+      $w1 $w2, $w1 $w2;
+    background-position: 0 50%, 0 calc(50% - $base), 0 calc(50% + $base),
+      50% 50%, 50% calc(50% - $base), 50% calc(50% + $base), 100% 50%,
+      100% calc(50% - $base), 100% calc(50% + $base);
+  }
+  50% {
+    background-size: $w1 100%, $w1 $w2, $w1 $w2, $w1 0, $w1 $w2, $w1 $w2, $w1 0,
+      $w1 $w2, $w1 $w2;
+    background-position: 0 50%, 0 calc(0% - $base), 0 calc(100% + $base),
+      50% 50%, 50% calc(50% - $base), 50% calc(50% + $base), 100% 50%,
+      100% calc(50% - $base), 100% calc(50% + $base);
+  }
+  75% {
+    background-size: $w1 100%, $w1 $w2, $w1 $w2, $w1 100%, $w1 $w2, $w1 $w2,
+      $w1 0, $w1 $w2, $w1 $w2;
+    background-position: 0 50%, 0 calc(0% - $base), 0 calc(100% + $base),
+      50% 50%, 50% calc(0% - $base), 50% calc(100% + $base), 100% 50%,
+      100% calc(50% - $base), 100% calc(50% + $base);
+  }
+  95%,
+  100% {
+    background-size: $w1 100%, $w1 $w2, $w1 $w2, $w1 100%, $w1 $w2, $w1 $w2,
+      $w1 100%, $w1 $w2, $w1 $w2;
+    background-position: 0 50%, 0 calc(0% - $base), 0 calc(100% + $base),
+      50% 50%, 50% calc(0% - $base), 50% calc(100% + $base), 100% 50%,
+      100% calc(0% - $base), 100% calc(100% + $base);
+  }
+}

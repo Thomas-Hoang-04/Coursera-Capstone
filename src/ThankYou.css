@@ -1,0 +1,9 @@
+@tailwind components;
+@layer components {
+  .thank-you {
+    @apply bg-sec_1 bg-opacity-30 h-[40rem] px-[18rem] flex items-center gap-8;
+  }
+  span {
+    @apply font-bold text-primary;
+  }
+}/*# sourceMappingURL=ThankYou.css.map */

@@ -1,0 +1,88 @@
+@tailwind components;
+
+@layer components {
+  .hero {
+    @apply h-[30rem] bg-primary px-28 flex items-center justify-around;
+  }
+
+  .table {
+    @apply transition-all my-8 p-4 px-10 font-semibold bg-sec_1 rounded-2xl text-[2rem] hover:text-high_1 hover:bg-sec_btn;
+  }
+
+  .week-specials {
+    @apply py-24 px-16;
+  }
+
+  .about {
+    @apply py-24 px-36 bg-high_1 flex items-center justify-around;
+  }
+
+  .footer {
+    @apply py-24 px-36 flex items-center justify-around gap-16;
+  }
+
+  .table:nth-child(2) {
+    @apply hover:bg-primary;
+  }
+
+  .loading {
+    @apply top-0 bg-opacity-50 opacity-80 w-full overflow-hidden h-full bg-primary fixed z-50 flex items-center justify-center gap-8;
+  }
+}
+
+$div-app: 80px;
+$w1-app: calc($div-app / 5);
+$w2-app: calc($div-app / 10);
+$base-app: calc($div-app / 20);
+
+.custom-loader-app {
+  --color: #f4ce14;
+  position: relative;
+  width: $div-app;
+  height: $div-app;
+  --c: linear-gradient(var(--color) 0 0);
+  --r1: radial-gradient(farthest-side at bottom, var(--color) 93%, #0000);
+  --r2: radial-gradient(farthest-side at top, var(--color) 93%, #0000);
+  background: var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2),
+    var(--c), var(--r1), var(--r2);
+  background-repeat: no-repeat;
+  animation: db2-app 1s infinite alternate;
+  z-index: 99;
+}
+
+@keyframes db2-app {
+  0%,
+  25% {
+    background-size: $w1-app 0, $w1-app $w2-app, $w1-app $w2-app, $w1-app 0,
+      $w1-app $w2-app, $w1-app $w2-app, $w1-app 0, $w1-app $w2-app,
+      $w1-app $w2-app;
+    background-position: 0 50%, 0 calc(50% - $base-app), 0 calc(50% + $base-app),
+      50% 50%, 50% calc(50% - $base-app), 50% calc(50% + $base-app), 100% 50%,
+      100% calc(50% - $base-app), 100% calc(50% + $base-app);
+  }
+  50% {
+    background-size: $w1-app 100%, $w1-app $w2-app, $w1-app $w2-app, $w1-app 0,
+      $w1-app $w2-app, $w1-app $w2-app, $w1-app 0, $w1-app $w2-app,
+      $w1-app $w2-app;
+    background-position: 0 50%, 0 calc(0% - $base-app), 0 calc(100% + $base-app),
+      50% 50%, 50% calc(50% - $base-app), 50% calc(50% + $base-app), 100% 50%,
+      100% calc(50% - $base-app), 100% calc(50% + $base-app);
+  }
+  75% {
+    background-size: $w1-app 100%, $w1-app $w2-app, $w1-app $w2-app,
+      $w1-app 100%, $w1-app $w2-app, $w1-app $w2-app, $w1-app 0, $w1-app $w2-app,
+      $w1-app $w2-app;
+    background-position: 0 50%, 0 calc(0% - $base-app), 0 calc(100% + $base-app),
+      50% 50%, 50% calc(0% - $base-app), 50% calc(100% + $base-app), 100% 50%,
+      100% calc(50% - $base-app), 100% calc(50% + $base-app);
+  }
+  95%,
+  100% {
+    background-size: $w1-app 100%, $w1-app $w2-app, $w1-app $w2-app,
+      $w1-app 100%, $w1-app $w2-app, $w1-app $w2-app, $w1-app 100%,
+      $w1-app $w2-app, $w1-app $w2-app;
+    background-position: 0 50%, 0 calc(0% - $base-app), 0 calc(100% + $base-app),
+      50% 50%, 50% calc(0% - $base-app), 50% calc(100% + $base-app), 100% 50%,
+      100% calc(0% - $base-app), 100% calc(100% + $base-app);
+  }
+}
